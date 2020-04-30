@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--This gives the browser instructions on how to control the page's dimensions and scaling.
+  The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+  The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Weather Data</title>
+  <link rel="stylesheet" href="final.css">
+  <!--<link rel="stylesheet" href="reset.css">-->
+  <!--<link rel="stylesheet" href="bootstrap.css">-->
+  <!--<link rel="stylesheet" href="reference.css">-->
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">-->
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body data-gr-c-s-loaded="true" class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top border border-light" style="background-color: #e3f2fd;">  <!--fixed-top, .mx-auto class for horizontally centering fixed-width block level content-->
+    <div class="navbar justify-content-start">
+      <a class="navbar-brand btn btn-info btn-lg active"  href="landing page.html">Lattitude</a>
+      <form class="form-inline">
+        <input id="inputsize" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--m - for classes that set margin   p - for classes that set padding-->
+  
+    <div class="collapse navbar-collapse nav justify-content-end" id="navbarSupportedContent"><!--id="navbarSupportedContent"-->
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <div class="btn-group ">
+            <button id="plotbutton" type="button" class="btn btn-primary text-sm-left">Plots</button> <!--btn: block in line-->
+              <button id="splitbutton" type="button" class=" btn btn-primary dropdown-toggle dropdown-toggle-split text-sm-left" data-toggle="dropdown">
+                <span class="sr-only">Toggle Dropdown</span> <!--split icon-->
+              </button>
+
+              <div class="dropdown-menu text-wrap" aria-labelledby="navbarDropdownMenuLink">
+                <a href="Max Temperature.html" class="dropdown-item" target="_blank">Max Temperature</a>
+                <a href="Humidy.html" class="dropdown-item" target="_blank">Humidity</a>
+                <a href="Cloudiness.html" class="dropdown-item" target="_blank">Cloudiness</a>
+                <a href="Wind Speed.html" class="dropdown-item" target="_blank">Wind Speed</a>
+                <div class="dropdown-divider"></div>
+                <a href="https://www.youtube.com"class="dropdown-item" target="_blank">Too much homework</a>
+              </div>
+          </div>   
+        </li>
+            
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" href="comparison.html">Comparisons <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" href="data.html">Data</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="box box-content">
+    <div class="container"> <!--container-fluid spanning the entire width of the viewport-->
+      <!--While containers can be nested, most layouts do not require a nested container.-->
+      <div class="row row-grid ">
+        <main class="col-md-8"> <!--class="container"-->
+          <!--<div class="row row-grid">-->  
+          <section class="posts ">
+            <h1>Summary: Latitude vs. X</h1>
+            <hr>
+            <div class="goushi">
+                <a target="_blank" href="data.html">
+                  <img id="temp" class="figure-img img-fluid rounded float-left" src="Resources/assets/images/Fig2.png" alt="Latitude vs. Humidity">
+                </a>
+  
+                <article class="post">
+                  <p >
+                    The purpose of this project was to analysis how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+                  </p>
+                  <p >
+                    After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.<span></span> Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides<span></span> the source data and visualizations created as part of the analysis, as well as explanations and descriptions<span></span> of any trends and correlations witnessed.
+                  </p>
+                </article>
+  
+            </div>
+          </section>
+        </main>
+  
+        <aside class=" col-md-4"> 
+            <h2 class="text-left">Visualizations</h2>
+          <hr>
+            <div class="row">
+              <div class="col-xs-6 col-sm-3 col-md-6">
+                  <a target="_blank" href="Max Temperature.html">
+                      <img class="figure-img img-fluid rounded mx-auto d-block" src="Resources/assets/images/Fig2.png" alt="vs. Max Temperature">
+                      <figcaption class="figure-caption text-center">vs. Max Temperature</figcaption>
+                  </a>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-6">
+                  <a target="_blank" href="Humidy.html">
+                      <img class="figure-img img-fluid rounded mx-auto d-block" src="Resources/assets/images/Fig2.png" alt="vs. Humidity">
+                      <figcaption class="figure-caption text-center">vs. Humidity</figcaption>
+                  </a>
+              </div>
+              <br>
+              <div class="col-xs-6 col-sm-3 col-md-6">
+                  <a target="_blank" href="Cloudiness.html" >
+                      <img class="figure-img img-fluid rounded mx-auto d-block" src="Resources/assets/images/Fig2.png" alt="vs. Cloudiness">
+                      <figcaption class="figure-caption text-center">vs. Cloudiness</figcaption>
+                  </a>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-6">
+                  <a target="_blank" href="Wind Speed.html">
+                      <img class="figure-img img-fluid rounded mx-auto d-block" src="Resources/assets/images/Fig2.png" alt="vs. Wind Speed">
+                      <figcaption class="figure-caption text-center">vs. Wind Speed</figcaption>
+                  </a>
+              </div>
+            </div>
+        </aside>
+      
+      </div>
+    </div>
+  </div>
+  
+  <div id="hidden2">
+    <hr>
+    <h1>Max Temperature</h1>
+      <p>Copy Right</p>
+      <p>Trilogy Education Services &#169; 2019 All right reserved</p>      </div>
+ </div>
+  
+    
+
+
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>          
+    
+
+</body>
+</html>
+
+
+
+
+<!--<div class="container"> <!--container-fluid spanning the entire width of the viewport-->
+      <!--While containers can be nested, most layouts do not require a nested container.-->
+      <!--<div class="row row-grid ">
+        <main class="col-md-8"> <!--class="container"-->
+          <!--<div class="row row-grid">-->  
+          <!--<section class="posts ">
+            <h1>Summary: Latitude vs. X</h1>
+            <hr>
+            <div class="clearfix">
+                <figure id="big" class="float-left">   <!-- display: inline-block;-->
+                  <!--<a target="_blank" href="Resources/assets/images/Fig1.png">
+                    <img src="Resources/assets/images/Fig1.png" class="figure-img img-fluid rounded float-left" alt="City Latitude vs. Max Temperature">
+                    <figcaption class="figure-caption text-center">City Latitude vs. Max Temperature</figcaption>
+                  </a>
+                </figure>
+                
+                <article class="post">
+                  <p >
+                    The purpose of this project was to analysis how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.
+                  </p>
+                  <p >
+                    After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude.<span></span> Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides<span></span> the source data and visualizations created as part of the analysis, as well as explanations and descriptions<span></span> of any trends and correlations witnessed.
+                  </p>
+                </article>
+            </div>
+          </section>
+        </main>
+
+        <aside class=" col-md-4"> 
+            <h2>Visualizations</h2>
+          <hr>
+          <br>
+            <div class="row">
+              <div class="col-xs-6 col-sm-3 col-md-6">
+                <figure>
+                  <a target="_blank" href="#">
+                    <img src="Resources/assets/images/Fig1.png" class="figure-img img-fluid rounded" alt="City Latitude vs. Max Temperature">
+                  </a>
+                </figure>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-6">
+                <figure>
+                  <a target="_blank" href="#">
+                    <img src="Resources/assets/images/Fig2.png" class="figure-img img-fluid rounded" alt="City Latitude vs. Humidity">
+                  </a>
+                </figure>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-6">
+                <figure>
+                  <a target="_blank" href="#">
+                    <img src="Resources/assets/images/Fig3.png" class="figure-img img-fluid rounded" alt="City Latitude vs. Cloudiness">
+                  </a>
+                </figure>
+              </div>
+              <div class="col-xs-6 col-sm-3 col-md-6">
+                <figure>
+                  <a target="_blank" href="#">
+                    <img src="Resources/assets/images/Fig4.png" class="figure-img img-fluid rounded" alt="City Latitude vs. Wind Speed">
+                  </a>
+                </figure>
+              </div>
+            </div>
+        </aside>
+      
+      </div>
+  </div>-->
